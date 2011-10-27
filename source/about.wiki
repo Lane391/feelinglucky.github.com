@@ -1,0 +1,17 @@
+= About =
+
+%toc
+
+== Links ==
+
+Email :: [images/email.png]
+Blog :: http://www.gracecode.com/
+!GoogleCode :: http://gracecode.googlecode.com
+!GitHub :: http://github.com/feelinglucky
+Twitter :: https://twitter.com/feelinglucky/
+Flickr ::  http://www.flickr.com/photos/feelinglucky/
+Yupoo :: http://feelinglucky.yupoo.com/
+Douban :: http://www.douban.com/people/feelinglucky/
+!SlideShare :: http://www.slideshare.net/feelinglucky/
+Snipt :: http://snipt.org/box/feelinglucky/
+Pan0ramio :: http://www.panoramio.com/user/feelinglucky
