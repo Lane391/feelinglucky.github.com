@@ -21,6 +21,7 @@ http://habamax.ru/myvim/images/vimwiki_logo.png
 * 组织笔记和想法
 * 组织行动列表（TODO List）
 * 编写文档
+* 完成像这样的网站 :^D
 
 
 == 安装 ==
