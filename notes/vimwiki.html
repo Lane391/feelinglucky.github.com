@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>vimwiki - 11pm.co.in</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+        <link rel="stylesheet" href="../style.css" /> 
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png" /> 
+    </head>
+    <body>
+
+    <a href="http://github.com/feelinglucky"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+
+        <div id="content">
+<h1 id="toc_1">VimWiki 使用笔记</h1>
+
+<div class="toc">
+<ul>
+<li><a href="#toc_1">VimWiki 使用笔记</a></li>
+<ul>
+<li><a href="#toc_1.1">更新记录</a></li>
+<li><a href="#toc_1.2">前言</a></li>
+<li><a href="#toc_1.3">安装</a></li>
+<li><a href="#toc_1.4">配置</a></li>
+<ul>
+<li><a href="#toc_1.4.1">配置路径</a></li>
+<li><a href="#toc_1.4.2">管理多个 Wiki</a></li>
+<li><a href="#toc_1.4.3">其他配置</a></li>
+</ul>
+<li><a href="#toc_1.5">使用</a></li>
+<ul>
+<li><a href="#toc_1.5.1">命令</a></li>
+<ul>
+<li><a href="#toc_1.5.1.1">Golbal 命令</a></li>
+<li><a href="#toc_1.5.1.2">Buffer 命令</a></li>
+</ul>
+<li><a href="#toc_1.5.2">快捷键</a></li>
+<li><a href="#toc_1.5.3">语法</a></li>
+<ul>
+<li><a href="#toc_1.5.3.1">章节</a></li>
+<li><a href="#toc_1.5.3.2">标题</a></li>
+<li><a href="#toc_1.5.3.3">链接</a></li>
+<li><a href="#toc_1.5.3.4">列表</a></li>
+<ul>
+<li><a href="#toc_1.5.3.4.1">无序列表</a></li>
+<li><a href="#toc_1.5.3.4.2">有序列表</a></li>
+<li><a href="#toc_1.5.3.4.3">定义列表</a></li>
+</ul>
+<li><a href="#toc_1.5.3.5">表格</a></li>
+</ul>
+</ul>
+<li><a href="#toc_1.6">技巧</a></li>
+<ul>
+<li><a href="#toc_1.6.1">同步 Vimwiki</a></li>
+<li><a href="#toc_1.6.2">生成所有的 HTML</a></li>
+</ul>
+<li><a href="#toc_1.7">附</a></li>
+<ul>
+<li><a href="#toc_1.7.1">Windows 下路径变错的问题</a></li>
+<li><a href="#toc_1.7.2">增加 HTML 输出时间戳标记</a></li>
+<li><a href="#toc_1.7.3">未解决问题</a></li>
+</ul>
+</ul>
+</ul>
+</div>
+
+<h2 id="toc_1.1">更新记录</h2>
+
+<dl>
+<dt>2010-04-13 </dt>
+<dd>增加使用“时间戳”章节</dd>
+<dt>2010-03-20 </dt>
+<dd>基本完成此篇文档</dd>
+<dt>2010-03-19 </dt>
+<dd>增加“配置”章节</dd>
+<dt>2010-03-18 </dt>
+<dd>初始化版本，增加“安装”章节</dd>
+</dl>
+
+<h2 id="toc_1.2">前言</h2>
+
+
+
+
+<p>
+如果你在使用 Vim，那么我敢保证你绝对不会错过这款名为
+<a href="http://vimwiki.googlecode.com">VimWiki</a> 的插件。 您使用 VimWiki 可以
+</p>
+
+<ul>
+<li>
+组织笔记和想法
+</li>
+<li>
+组织行动列表（TODO List）
+</li>
+<li>
+编写文档
+</li>
+</ul>
+
+
+<h2 id="toc_1.3">安装</h2>
+
+<p>
+VimWiki 的项目主页为 <a href="http://vimwiki.googlecode.com">http://vimwiki.googlecode.com</a> ，下载压缩文件解压缩后用 Vim 打开，然后
+</p>
+
+<pre>
+:source %
+</pre>
+
+<p>
+即可安装完成。
+</p>
+
+<p>
+同时建议 Vim 配置文件中有下面的选项：
+</p>
+
+<pre>
+set nocompatible
+filetype plugin on
+syntax on
+</pre>
+
+<p>
+上述配置的具体解释详细解释看 help 文档。
+</p>
+
+
+<h2 id="toc_1.4">配置</h2>
+
+<h3 id="toc_1.4.1">配置路径</h3>
+
+<p>
+我的 VimWiki 配置
+</p>
+
+<pre>
+" VimWiki 配置
+let g:vimwiki_list = [{"path": "~/Wiki/", "path_html": "~/Sites/wiki/", "auto_export": 1}]
+</pre>
+
+<p>
+其中，path 为 保存 wiki 的文件路径，path_html 为输出 html 的路径，auto_export
+设置为自动导出。
+</p>
+
+<h3 id="toc_1.4.2">管理多个 Wiki</h3>
+
+<p>
+管理多个 <a href="VimWiki.html">VimWiki</a> 即在 g:vimwiki_list 中增加对应的数组选项即可，如
+</p>
+ 
+<pre>
+let g:vimwiki_list = [{"path": "...", "path_html": "..."},
+                    \ {...}, ... ]
+</pre>
+
+<h3 id="toc_1.4.3">其他配置</h3>
+
+<pre>
+let g:vimwiki_auto_checkbox = 0
+</pre>
+
+<p>
+设置列表不自动添加 checkbox 框
+</p>
+
+<pre>
+let g:vimwiki_w32_dir_enc = 'cp936'
+</pre>
+
+<p>
+如果在中文版的 Windows 下，目录名称如果为中文，则应用此选项（否则默认使用 Vim
+encoding 指定的编码）。
+</p>
+
+
+<h2 id="toc_1.5">使用</h2>
+
+<h3 id="toc_1.5.1">命令</h3>
+
+<h4 id="toc_1.5.1.1">Golbal 命令</h4>
+
+<ul>
+<li>
+<code>:VimwikiGoHome</code>
+</li>
+<li>
+<code>:VimwikiTabGoHome</code>
+</li>
+<li>
+<code>:VimwikiUISelect</code>
+</li>
+</ul>
+ 
+<h4 id="toc_1.5.1.2">Buffer 命令</h4>
+
+<ul>
+<li>
+<code>:Vimwiki2HTML</code>
+</li>
+<li>
+<code>:VimwikiAll2HTML</code>
+</li>
+<li>
+<code>:VimwikiDeleteWord</code>
+</li>
+<li>
+<code>:VimwikiDeleteWord</code>
+</li>
+<li>
+<code>:VimwikiFollowWord</code>
+</li>
+<li>
+<code>:VimwikiGoBackWord</code>
+</li>
+<li>
+<code>:VimwikiNextWord</code>
+</li>
+<li>
+<code>:VimwikiPrevWord</code>
+</li>
+<li>
+<code>:VimwikiRenameWord</code>
+</li>
+<li>
+<code>:VimwikiSplitWord</code>
+</li>
+<li>
+<code>:VimwikiToggleListItem</code>
+</li>
+<li>
+<code>:VimwikiVsplitWord</code>
+</li>
+</ul>
+
+<h3 id="toc_1.5.2">快捷键</h3>
+
+<dl>
+<dt><code>[n]\ww</code> </dt>
+<dd>打开第 N 个 Wiki，如果没指定，则打开默认 Wiki</dd>
+<dt><code>[n]\wt</code> </dt>
+<dd>新标签页打开第 N 个Wiki</dd>
+<dt><code>\ws</code> </dt>
+<dd>打开 Wiki 列表并选择打开</dd>
+</dl>
+
+<dl>
+<dt><code>&lt;Enter&gt;</code> </dt>
+<dd>打开、创建 WikiWord</dd>
+<dt><code>&lt;Shift + Enter&gt;</code> </dt>
+<dd>水平分隔并打开、创建 WikiWord</dd>
+<dt><code>&lt;Ctrl + Enter&gt;</code> </dt>
+<dd>垂直分割打开、创建 WikiWord</dd>
+<dt><code>&lt;Backspace&gt;</code> </dt>
+<dd>回到上一个 WikiWord</dd>
+<dt><code>&lt;Tab&gt;</code> </dt>
+<dd>找到下个 WikiWord</dd>
+<dt><code>&lt;Shift-Tab&gt;</code> </dt>
+<dd>找到上个 WikiWord</dd>
+<dt><code>\wd</code> </dt>
+<dd>删除当前 WikiWord</dd>
+<dt><code>\wr</code> </dt>
+<dd>重命名 WikiWord</dd>
+<dt><code>&lt;Ctrl-Space&gt;</code> </dt>
+<dd>打开、关闭列表</dd>
+<dt><code>=</code> </dt>
+<dd>增加、创见标题</dd>
+<dt><code>-</code> </dt>
+<dd>删除、减少标题</dd>
+</dl>
+
+<h3 id="toc_1.5.3">语法</h3>
+
+<h4 id="toc_1.5.3.1">章节</h4>
+
+<dl>
+<dt><code>*text*</code> </dt>
+<dd>粗体</dd>
+<dt><code>_text_</code> </dt>
+<dd>斜体</dd>
+<dt><code>~~text~~</code> </dt>
+<dd>删除线</dd>
+<dt><code>^text^</code> </dt>
+<dd>上标</dd>
+<dt><code>,,text,,</code> </dt>
+<dd>下标</dd>
+<dt>`<code>code</code>` </dt>
+<dd>代码、不解析</dd>
+<dt><code>&lt;!- - text - -&gt;</code> </dt>
+<dd>注释，同时布显示于 HTML 输出</dd>
+</dl>
+
+<h4 id="toc_1.5.3.2">标题</h4>
+
+<dl>
+<dt><code>= header =</code> </dt>
+<dd>标题一</dd>
+<dt><code>== header ==</code> </dt>
+<dd>标题二</dd>
+<dt><code>=== header ===</code> </dt>
+<dd>标题三</dd>
+<dt><code>==== header ====</code> </dt>
+<dd>标题四</dd>
+<dt><code>===== header =====</code> </dt>
+<dd>标题五</dd>
+<dt><code>====== header ======</code> </dt>
+<dd>标题六</dd>
+</dl>
+
+<h4 id="toc_1.5.3.3">链接</h4>
+
+<dl>
+<dt><code>TextText</code> </dt>
+<dd>WikiWord</dd>
+<dt><code>!TextText</code> </dt>
+<dd>不要链接指定的 WikiWord</dd>
+<dt><code>[[Text text]]</code> </dt>
+<dd>强制指定某个 WikiWord，注意中文等字符</dd>
+<dt><code>[[Text text | Text]]</code> </dt>
+<dd>使用某个描述到 WikiWord</dd>
+</dl>
+
+<p>
+下述链接格式可多项组合
+</p>
+
+<dl>
+<dt><code>http://site/</code> </dt>
+<dd>自动连接</dd>
+<dt><code>[http://site/ home page]</code> </dt>
+<dd>带描述的连接</dd>
+<dt><code>http://site/pic.jpg</code> </dt>
+<dd>解析为图片</dd>
+<dt><code>[[images/pic.jpg]]</code> </dt>
+<dd>链接到本地图片</dd>
+</dl>
+
+<h4 id="toc_1.5.3.4">列表</h4>
+
+<h5 id="toc_1.5.3.4.1">无序列表</h5>
+
+<pre>
+* items
+* items
+* items
+* items
+</pre>
+
+<h5 id="toc_1.5.3.4.2">有序列表</h5>
+
+<pre>
+# items
+# items
+# items
+# items
+</pre>
+
+<h5 id="toc_1.5.3.4.3">定义列表</h5>
+
+<pre>
+define :: desption
+define :: desption
+define :: desption
+define :: desption
+</pre>
+
+<h4 id="toc_1.5.3.5">表格</h4>
+
+<pre>
+| 表格 | 表格 | 表格 |
+| 表格 | 表格 | 表格 |
+| 表格 | 表格 | 表格 |
+</pre>
+
+
+
+<h2 id="toc_1.6">技巧</h2>
+
+<h3 id="toc_1.6.1">同步 Vimwiki</h3>
+
+<p>
+可以考虑使用 Dropbox &amp; <a href="Rsync-Basic-Notes.html">Rsync-Basic-Notes</a> 同步 Wiki 文件以及脚本，架构图如下
+</p>
+
+<p>
+<img src="http://files.gracecode.com/2010_03_20/1269096655.png" />
+</p>
+
+<h3 id="toc_1.6.2">生成所有的 HTML</h3>
+
+<p>
+重新生成所有的 HTML 页面（不包括样式）
+</p>
+
+<pre>
+:VimwikiAll2HTML
+</pre>
+
+
+
+<h2 id="toc_1.7">附</h2>
+
+<ul>
+<li>
+<a href="http://vimwiki.googlecode.com/hg/misc/vimwikiqrc.pdf">Vimwiki 参考小抄（pdf 格式）</a>
+</li>
+<li>
+<a href="http://xbeta.info/vimwiki.htm">http://xbeta.info/vimwiki.htm</a>
+</li>
+</ul>
+ 
+<h3 id="toc_1.7.1">Windows 下路径变错的问题</h3>
+
+<p>
+1、检查 HTML 输出的路径是否正确
+</p>
+
+<pre>
+: shellescape(expand('%:p:h'))
+</pre>
+
+<p>
+2、配置文件文件中，盘符路径必须大写而且最后最好加上目录分隔符，例如
+</p>
+
+<pre>
+" 注意！
+" 1、如果在 Windows 下，盘符必须大写
+" 2、路径末尾最好加上目录分隔符
+let s:vimwiki_root = "C:/.../Vimwiki"
+let g:vimwiki_list = [
+            \{"path": s:vimwiki_root."/Default/",
+            \"path_html": s:vimwiki_root."/Default/html/", "auto_export": 1}
+            \]
+</pre>
+
+<h3 id="toc_1.7.2">增加 HTML 输出时间戳标记</h3>
+
+<p>
+给 <code>$VIM_FILES/autoload/vimwiki_html.vim</code> 打下面的补丁：
+</p>
+
+<p>
+<a href="http://gracecode.googlecode.com/files/vimwiki_html_vim.patch">http://gracecode.googlecode.com/files/vimwiki_html_vim.patch</a>
+</p>
+
+<p>
+然后再设置的自定义 footer.tpl 的合适位置中，加入
+</p>
+
+<pre>
+%time_stamp%
+</pre>
+
+<p>
+即可在每份输出的 HTML 中加入时间戳（导出 HTML
+的时间）。如果想更改时间戳的格式，更改变量
+</p>
+
+<pre>
+g:vimwiki_timestamp_format
+</pre>
+
+<p>
+即可，例如
+</p>
+
+<pre>
+let g:vimwiki_timestamp_format = '%Y-%m-%d %H:%M:%S'
+</pre>
+
+<h3 id="toc_1.7.3">未解决问题</h3>
+
+<dl>
+<dt>2010-04-06 </dt>
+<dd>似乎有目录生成错误的问题，见 <a href="TCSH.html">TCSH 学习笔记</a></dd>
+</dl>
+        </div>
+        <div id="footer">
+            <a id="back_index" href="index.html">index</a>
+            This page is generated by <a href="http://vimwiki.googlecode.com/">Vimwiki</a> <br />
+            2011-10-27 23:40:00
+        </div>
+    </body>
+</html>

@@ -1,5 +1,6 @@
-= Android Notes =
+= Notes =
 
 %toc
 
 == [[links|Links]] ==
+== [[vimwiki|VimWiki]] ==

@@ -2,7 +2,7 @@
 
 %toc
 
-== [[notes/index|Android Notes]] == 
+== [[notes/index|Notes]] == 
 
 == [[about|About]] ==
 
