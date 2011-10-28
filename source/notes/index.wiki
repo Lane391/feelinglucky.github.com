@@ -1,6 +1,31 @@
-= Notes =
+= Android Programming Notes =
 
 %toc
 
-== [[links|Links]] ==
-== [[vimwiki|VimWiki]] ==
+== Basic ==
+
+=== [[ActivityLifeCycle|Activity 生命周期]] ===
+
+简单的介绍 Activity 的生命周期
+
+=== [[ActivityStack|Activity 堆栈]] ===
+
+
+=== [[IntentBasic|Intent 通信]] ===
+
+
+== Layout ==
+
+=== [[LayoutBasicTips|Layout 基础 Tips]] ===
+
+
+
+== Widget ==
+
+=== [[WebViewBasic|WebView 基本使用]] ===
+
+
+
+== Java Language ==
+
+

@@ -1,10 +1,12 @@
 = 11pm.co.in =
 
-<!--
 %toc
--->
 
-== [[notes/index|Notes]] == 
+== [[notes/index|Android Programing Notes]] == 
+
+这里主要记录学习 Android 开发期间的点笔记以及些代码实例
 
 == [[about|About]] ==
+
+有关此 Wiki 的些信息以及些联系方式
 

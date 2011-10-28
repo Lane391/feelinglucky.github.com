@@ -16,7 +16,7 @@ http://habamax.ru/myvim/images/vimwiki_logo.png
 -->
 
 如果你在使用 Vim，那么我敢保证你绝对不会错过这款名为
-[http://vimwiki.googlecode.com VimWiki] 的插件。 您使用 !VimWiki 可以
+[http://vimwiki.googlecode.com vimwiki] 的插件。 您使用 !VimWiki 可以
 
 * 组织笔记和想法
 * 组织行动列表（TODO List）
@@ -61,7 +61,7 @@ let g:vimwiki_list = [{"path": "~/Wiki/", "path_html": "~/Sites/wiki/", "auto_ex
 
 === 管理多个 Wiki ===
 
-管理多个 VimWiki 即在 g:vimwiki_list 中增加对应的数组选项即可，如
+管理多个 vimwiki 即在 g:vimwiki_list 中增加对应的数组选项即可，如
  
 {{{
 let g:vimwiki_list = [{"path": "...", "path_html": "..."},
@@ -205,7 +205,7 @@ define :: desption
 
 === 同步 Vimwiki ===
 
-可以考虑使用 Dropbox & [[Rsync-Basic-Notes]] 同步 Wiki 文件以及脚本，架构图如下
+可以考虑使用 Dropbox/rsyc 同步 Wiki 文件以及脚本，架构图如下
 
 http://files.gracecode.com/2010_03_20/1269096655.png
 
@@ -272,5 +272,5 @@ let g:vimwiki_timestamp_format = '%Y-%m-%d %H:%M:%S'
 
 === 未解决问题 ===
 
-2010-04-06 :: 似乎有目录生成错误的问题，见 [[TCSH|TCSH 学习笔记]]
+2010-04-06 :: 似乎有目录生成错误的问题，但无法重现
  

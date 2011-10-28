@@ -2,6 +2,7 @@
 
 %toc
 
+
 == Links ==
 
 Email :: [images/email.png]
@@ -13,5 +14,10 @@ Flickr ::  http://www.flickr.com/photos/feelinglucky/
 Yupoo :: http://feelinglucky.yupoo.com/
 Douban :: http://www.douban.com/people/feelinglucky/
 !SlideShare :: http://www.slideshare.net/feelinglucky/
-Snipt :: http://snipt.org/box/feelinglucky/
-Pan0ramio :: http://www.panoramio.com/user/feelinglucky
+
+
+== VimWiki ==
+
+本站使用 [[notes/vimwiki|vimwiki]] 编写，如果您这工具或者 Vim
+感兴趣，你可以[[notes/vimwiki|参考这里]]。
+
