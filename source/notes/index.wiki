@@ -10,7 +10,6 @@
 
 === [[ActivityStack|Activity 堆栈]] ===
 
-
 === [[IntentBasic|Intent 通信]] ===
 
 
@@ -19,13 +18,18 @@
 === [[LayoutBasicTips|Layout 基础 Tips]] ===
 
 
-
 == Widget ==
 
 === [[WebViewBasic|WebView 基本使用]] ===
 
-
-
 == Java Language ==
 
 
+== Other ==
+
+=== [[AndroidSnipts|Android 代码片段]] ===
+
+=== Links ===
+
+* http://blog.csdn.net/Android_Tutor/
+* https://code.google.com/p/androidbmi/wiki/DiveIntoAndroid 

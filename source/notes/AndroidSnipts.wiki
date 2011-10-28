@@ -1,0 +1,65 @@
+= Android 代码片段 =
+
+%toc
+
+== 按两次退出本 Activity ==
+
+{{{
+private long exitTime = 0;
+
+@Override
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+    if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+        if((System.currentTimeMillis()-exitTime) > 2000){
+            Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show(); 
+            exitTime = System.currentTimeMillis();
+        } else{
+            finish();
+        }
+                    
+        return true;
+	}
+	return super.onKeyDown(keyCode, event);
+}
+
+// 如果在 ActivityGroup 中，onKeyDown 有可能无法捕获，
+// 则使用 dispatchKeyEvent 方法
+@Override
+public boolean dispatchKeyEvent(KeyEvent event) {
+    int keyCode = event.getKeyCode();
+    // ...
+}
+}}}
+
+
+== 确定取消模态框 ==
+
+{{{
+Builder dialog = new AlertDialog.Builder(mContext);
+
+dialog.setTitle(DIALOG_TITLE)
+      .setMessage(DIALOG_MESSAGE)
+      .setIcon(android.R.drawable.ic_dialog_alert);
+      
+// 确定按钮事件
+dialog.setPositiveButton(BUTTON_OK, 
+    new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int whichButton) {
+            setResult(RESULT_OK);
+            // ...
+        }
+});
+
+// 取消按钮事件
+dialog.setNegativeButton(BUTTON_CANCEL, 
+    new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int whichButton) {
+            //...
+        }
+});
+
+dialog.show();
+}}}
+
+
+

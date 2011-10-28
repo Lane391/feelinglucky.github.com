@@ -1,0 +1,36 @@
+= Activity 生命周期 =
+
+原文 http://blog.csdn.net/android_tutor/article/details/5772285
+
+%toc
+
+周期图示，更复杂的可以访问 http://developer.android.com/reference/android/app/Activity.html
+
+[[images/0_12803210018q71.png]]
+
+Activity 其实是继承了 !ApplicationContext
+
+== 启动 ==
+
+打开应用时先后执行了 onCreate()、onStart()、onResume 三个方法，
+
+[[images/0_1280324212Y5nt.jpg]]
+
+
+== 退出 ==
+
+当按下 BACK 键后，Activity 实际执行了 onPause()、onStop()、onDestory() 三个方法（关闭程序）
+
+[[images/0_1280324618Bqxb.jpg]]
+
+== 中断和恢复 ==
+
+当按下 HOME 键后，Activity 执行了 onPause()、onStop()
+
+[[images/0_1280325044k0c7.jpg]]
+
+当按下 HOME 键后，再次启动 Activity 时，则先后分别执行了 onRestart()、onStart()、onResume()
+
+[[images/0_1280325373Qjq7.jpg]]
+
+
