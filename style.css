@@ -60,7 +60,7 @@ a:visited {
 
 }
 
-a[href^="https://"], a[href^="http://"] {
+#content a[href^="https://"], #content a[href^="http://"] {
     background: url(images/external.gif) no-repeat top right;
     padding-right: 16px;
 }
