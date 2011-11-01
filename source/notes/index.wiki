@@ -4,9 +4,9 @@
 
 == Basic ==
 
-=== [[ActivityLifeCycle|Activity 生命周期]] ===
+=== [[AndroidSnipts|Android 代码片段]] ===
 
-简单的介绍 Activity 的生命周期
+=== [[ActivityLifeCycle|Activity 生命周期（已整理）]] ===
 
 === [[ActivityStack|Activity 堆栈]] ===
 
@@ -15,21 +15,35 @@
 
 == Layout ==
 
-=== [[LayoutBasicTips|Layout 基础 Tips]] ===
+=== [[LayoutBasicTips|Layout Tips]] ===
+
+=== [[TabHostLayout|Tab 标签页的实现]] ===
+
+=== [[ListViewBasic|ListView 基本操作]] ===
+
+=== [[MenusBasic|菜单基本操作]] ===
 
 
 == Widget ==
 
 === [[WebViewBasic|WebView 基本使用]] ===
 
+=== [[AppWidgetProviderBasic|AppWidgetProvider 使用笔记]] ===
+
+=== [[AndroidSQLiteBasic|使用 Android SQLite]] ===
+
+=== [[AndroidHTTPRequestBasic|使用 Android HTTP Request]] ===
+
+
 == Java Language ==
+
+=== [[JavaSnipts|Java 代码片段]] ===
 
 
 == Other ==
-
-=== [[AndroidSnipts|Android 代码片段]] ===
 
 === Links ===
 
 * http://blog.csdn.net/Android_Tutor/
 * https://code.google.com/p/androidbmi/wiki/DiveIntoAndroid 
+ 

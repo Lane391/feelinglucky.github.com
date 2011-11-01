@@ -1,0 +1,57 @@
+= Layout Tips =
+
+%toc
+
+== 如何让 Layout 全屏？ ==
+
+两种方式，一种在 onCreate 中设置
+
+{{{
+requestWindowFeature(Window.FEATURE_NO_TITLE);
+getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+}}}
+
+另外也可以在 Mainifest 中设置
+
+{{{
+android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+}}}
+
+或者手工在 style.xml 中设置
+
+{{{
+<style name="fullscreen">
+    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowBackground">@drawable/bg</item>
+</style>
+}}}
+
+然后 {{{android:theme="@style/fullscreen"}}}
+
+
+== 让 TextView 自带滚动条 ==  
+
+{{{
+<TextView  
+    android:id="@+id/textview"  
+    android:layout_width="fill_parent"  
+    android:layout_height="wrap_content"  
+    android:singleLine="false"  
+    android:maxLines="5"  
+    android:scrollbars="vertical"  
+/>
+}}}
+
+设置 !TextView 相应的方法
+
+{{{
+TextView textView = (TextView)findViewById(R.id.text_view);   
+textView.setMovementMethod(ScrollingMovementMethod.getInstance());
+}}}
+
+
+== 控件居中 == 
+
+{{{有待整理}}}
+

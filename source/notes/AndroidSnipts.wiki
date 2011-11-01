@@ -45,7 +45,6 @@ dialog.setTitle(DIALOG_TITLE)
 dialog.setPositiveButton(BUTTON_OK, 
     new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int whichButton) {
-            setResult(RESULT_OK);
             // ...
         }
 });
